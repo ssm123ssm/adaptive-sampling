@@ -3,34 +3,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adaptive Serosurveillance</title>
+  <title>Adaptive serosurveillance &mdash; SMDM 2026 poster supplement</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 720px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
-      line-height: 1.6;
-      color: #222;
+    :root {
+      --mcgill-red: #A6192E;
+      --accent-teal: #1F7A8C;
+      --accent-gold: #D4A53A;
+      --ink: #1C1C1C;
+      --paper: #F4F2EE;
+      --mid-grey: #6E6E6E;
+      --soft-grey: #D8D5CE;
     }
-    h1 { color: #1a4d8c; margin-bottom: 0.2rem; }
-    .subtitle { color: #666; margin-top: 0; }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      background: #fafafa;
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: "Charter", "Iowan Old Style", Georgia, "Times New Roman", serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+      margin: 0;
+      padding: 0;
+      font-size: 17px;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.2rem 1.4rem 4rem;
+    }
+    header {
+      border-top: 6px solid var(--mcgill-red);
+      padding-top: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+    .eyebrow {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mcgill-red);
+      font-weight: 700;
+      margin: 0 0 0.6rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      line-height: 1.25;
+      margin: 0 0 0.9rem;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .authors {
+      font-size: 1rem;
+      color: var(--ink);
+      margin: 0 0 0.35rem;
+    }
+    .authors strong { color: var(--mcgill-red); }
+    .affils {
+      font-size: 0.86rem;
+      color: var(--mid-grey);
+      margin: 0;
+    }
+    h2 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--mcgill-red);
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+      margin: 2.4rem 0 0.7rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--soft-grey);
+      font-weight: 700;
+    }
+    h3 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+      color: var(--accent-teal);
+      margin: 1.4rem 0 0.35rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 0.9rem; }
+    a {
+      color: var(--accent-teal);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(31, 122, 140, 0.35);
+    }
+    a:hover { border-bottom-color: var(--accent-teal); }
+    .lede {
+      font-size: 1.02rem;
+      color: var(--ink);
+      background: #fff;
+      border-left: 4px solid var(--accent-gold);
+      padding: 0.9rem 1.1rem;
+      margin: 0 0 1.6rem;
+    }
+    .lede strong { color: var(--mcgill-red); }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.5rem 0 1rem;
+      background: #fff;
+    }
+    .data-table th, .data-table td {
+      text-align: right;
+      padding: 0.45rem 0.7rem;
+      border-bottom: 1px solid var(--soft-grey);
+    }
+    .data-table th:first-child, .data-table td:first-child {
+      text-align: left;
+    }
+    .data-table thead th {
+      background: var(--paper);
+      color: var(--mcgill-red);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      border-bottom: 2px solid var(--mcgill-red);
+    }
+    .data-table tfoot td {
+      border-top: 2px solid var(--ink);
+      border-bottom: none;
+      font-weight: 700;
+    }
+    .ethics {
+      background: #fff;
+      border: 1px solid var(--soft-grey);
+      border-left: 4px solid var(--accent-teal);
+      padding: 0.9rem 1.1rem;
+      font-size: 0.95rem;
+    }
+    ol.refs {
+      padding-left: 1.4rem;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    ol.refs li {
+      margin-bottom: 0.55rem;
+      padding-left: 0.2rem;
+    }
+    ol.refs li::marker { color: var(--mcgill-red); font-weight: 700; }
+    .ref-journal { font-style: italic; }
+    .meta-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.1rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin: 0.4rem 0 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--soft-grey);
+      font-size: 0.82rem;
+      color: var(--mid-grey);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    @media (max-width: 520px) {
+      body { font-size: 16px; }
+      h1 { font-size: 1.5rem; }
+      .data-table { font-size: 0.82rem; }
+      .data-table th, .data-table td { padding: 0.35rem 0.45rem; }
     }
   </style>
 </head>
 <body>
-  <h1>Adaptive Serosurveillance</h1>
-  <p class="subtitle">Particle-filter adaptive sampling for SARS-CoV-2 seroprevalence estimation</p>
+<div class="wrap">
 
-  <div class="card">
-    <p><strong>Test page.</strong> Supplementary material for the SMDM Lusted finalist poster will be hosted here.</p>
-    <p>Repository: <a href="https://github.com/ssm123ssm/adaptive-sampling">github.com/ssm123ssm/adaptive-sampling</a></p>
+<header>
+  <p class="eyebrow">SMDM 2026 &middot; Lusted Student Prize finalist &middot; QMTD</p>
+  <h1>Using a stochastic epidemic model to guide efficient seroprevalence sampling decisions</h1>
+  <p class="authors">
+    <strong>Supun Manathunga</strong><sup>1</sup> &middot;
+    Nathaniel Osgood<sup>2</sup> &middot;
+    Sheila O'Brien<sup>3</sup> &middot;
+    David L Buckeridge<sup>1,4</sup> &middot;
+    W. Alton Russell<sup>1,4</sup>
+  </p>
+  <p class="affils">
+    <sup>1</sup>Division of Experimental Medicine, McGill University &nbsp;
+    <sup>2</sup>University of Saskatchewan &nbsp;
+    <sup>3</sup>Canadian Blood Services &nbsp;
+    <sup>4</sup>School of Population and Global Health, McGill University
+  </p>
+  <div class="meta-links">
+    <a href="https://github.com/ssm123ssm/adaptive-sampling">Code repository</a>
+    <a href="mailto:ssm123ssm@gmail.com">Contact author</a>
   </div>
+</header>
+
+<p class="lede">
+  Poster supplement &mdash; data description, ethics statement, and references for
+  <strong>Manathunga et&nbsp;al.</strong>, <em>Adaptive sample size design for serological surveillance during an epidemic using particle filter predictions.</em>
+</p>
+
+<h2>Data</h2>
+
+<p>
+  During the COVID-19 serosurveillance program, Canadian Blood Services (CBS) tested residual EDTA plasma retention samples from blood donors using different antibody assays as the pandemic evolved. In the early phase of surveillance (mid-2020), samples were screened for IgG antibodies against the SARS-CoV-2 nucleocapsid (N) protein using the Abbott Architect SARS-CoV-2 IgG chemiluminescent microparticle immunoassay (CMIA) on Abbott Architect immunoassay analyzers, allowing detection of antibodies generated following natural infection.
+</p>
+
+<p>
+  As vaccination campaigns began in 2021 and the need arose to distinguish infection-induced from vaccine-induced immunity, CBS adopted a dual-assay approach using the Roche Elecsys Anti-SARS-CoV-2 spike semi-quantitative immunoassay (Roche Diagnostics International Ltd., Rotkreuz, Switzerland), measuring total antibodies (IgA, IgM, IgG) to the SARS-CoV-2 S1/receptor-binding domain (anti-S), together with the Roche Elecsys Anti-SARS-CoV-2 qualitative immunoassay measuring total antibodies to the nucleocapsid antigen (anti-N).
+</p>
+
+<p>
+  We used serological data spanning <strong>May 2020 through November 2023</strong>, comprising <strong>1,103,191 weekly serological records</strong> from <strong>448,241 unique blood donors</strong> across 9 Canadian provinces, grouped into four modeled regions. Strata were defined by province, sex, and age group (18&ndash;26, 27&ndash;36, 37&ndash;46, 47&ndash;56, and 57+ years), with stratum population sizes drawn from Statistics Canada.
+</p>
+
+<table class="data-table" aria-label="Analytic sample by modeled region">
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Records</th>
+      <th>Unique donors</th>
+      <th>Anti-N&nbsp;<em>n</em></th>
+      <th>Anti-S&nbsp;<em>n</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Atlantic</td><td>102,033</td><td>41,844</td><td>102,033</td><td>85,610</td></tr>
+    <tr><td>Prairies</td><td>317,448</td><td>125,034</td><td>317,448</td><td>286,128</td></tr>
+    <tr><td>British Columbia</td><td>183,118</td><td>76,428</td><td>183,118</td><td>166,939</td></tr>
+    <tr><td>Ontario</td><td>500,592</td><td>204,935</td><td>500,592</td><td>429,180</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td>1,103,191</td><td>448,241</td><td>1,103,191</td><td>967,857</td></tr>
+  </tfoot>
+</table>
+
+<h2>Ethics statement</h2>
+
+<div class="ethics">
+  <p style="margin:0">
+    The SARS-CoV-2 serosurveillance study was approved by the Research Ethics Board of Canadian Blood Services. This secondary analysis was approved by the Faculty of Medicine &amp; Health Sciences Research Ethics Board Office, McGill University, Montreal, Canada (REB number <strong>22-03-077</strong>).
+  </p>
+</div>
+
+<h2>References</h2>
+
+<ol class="refs">
+  <li>Müller SA, Agweyu A, Akanbi OA, et&nbsp;al. Learning from serosurveillance for SARS-CoV-2 to inform pandemic preparedness and response. <span class="ref-journal">The Lancet</span>. 2023;402(10399):356&ndash;358. <a href="https://doi.org/10.1016/S0140-6736(23)00964-9">doi:10.1016/S0140-6736(23)00964-9</a></li>
+
+  <li>Haselbeck AH, Im J, Prifti K, Marks F, Holm M, Zellweger RM. Serology as a tool to assess infectious disease landscapes and guide public health policy. <span class="ref-journal">Pathogens</span>. 2022;11(7):732. <a href="https://doi.org/10.3390/pathogens11070732">doi:10.3390/pathogens11070732</a></li>
+
+  <li>Fosgate GT. Practical sample size calculations for surveillance and diagnostic investigations. <span class="ref-journal">Journal of Veterinary Diagnostic Investigation</span>. 2009;21(1):3&ndash;14. <a href="https://doi.org/10.1177/104063870902100102">doi:10.1177/104063870902100102</a></li>
+
+  <li>Stringhini S, Zaballa M-E, Pullen N, et&nbsp;al. Large variation in anti-SARS-CoV-2 antibody prevalence among essential workers in Geneva, Switzerland. <span class="ref-journal">Nature Communications</span>. 2021;12:3455. <a href="https://doi.org/10.1038/s41467-021-23796-4">doi:10.1038/s41467-021-23796-4</a></li>
+
+  <li>Franceschi VB, Santos AS, Glaeser AB, et&nbsp;al. Population-based prevalence surveys during the Covid-19 pandemic: a systematic review. <span class="ref-journal">Reviews in Medical Virology</span>. 2021;31(4):e2200. <a href="https://doi.org/10.1002/rmv.2200">doi:10.1002/rmv.2200</a></li>
+
+  <li>Daza-Torres ML, Capistrán MA, Capella A, Christen JA. Bayesian sequential data assimilation for COVID-19 forecasting. <span class="ref-journal">Epidemics</span>. 2022;39:100564. <a href="https://doi.org/10.1016/j.epidem.2022.100564">doi:10.1016/j.epidem.2022.100564</a></li>
+
+  <li>Doucet A, de Freitas N, Gordon N. An introduction to sequential Monte Carlo methods. In: <span class="ref-journal">Sequential Monte Carlo Methods in Practice</span>. Springer; 2001:3&ndash;14. <a href="https://doi.org/10.1007/978-1-4757-3437-9_1">doi:10.1007/978-1-4757-3437-9_1</a></li>
+
+  <li>Zuo J-Y, Jia Y-N, Zhang Y-Z, Lian W. Adaptive iterated particle filter. <span class="ref-journal">Electronics Letters</span>. 2013;49(12):742&ndash;744. <a href="https://doi.org/10.1049/el.2012.4506">doi:10.1049/el.2012.4506</a></li>
+
+  <li>Gordon NJ, Salmond DJ, Smith AFM. Novel approach to nonlinear/non-Gaussian Bayesian state estimation. <span class="ref-journal">IEE Proceedings F (Radar and Signal Processing)</span>. 1993;140(2):107&ndash;113. <a href="https://doi.org/10.1049/ip-f-2.1993.0015">doi:10.1049/ip-f-2.1993.0015</a></li>
+
+  <li>Liu JS. Blind deconvolution via sequential imputations. <span class="ref-journal">Journal of the American Statistical Association</span>. 1995;90(430):567&ndash;576. <a href="https://doi.org/10.1080/01621459.1995.10476552">doi:10.1080/01621459.1995.10476552</a></li>
+
+  <li>Kong A, Liu JS, Wong WH. Sequential imputations and Bayesian missing data problems. <span class="ref-journal">Journal of the American Statistical Association</span>. 1994;89(425):278&ndash;288. <a href="https://doi.org/10.1080/01621459.1994.10476469">doi:10.1080/01621459.1994.10476469</a></li>
+
+  <li>Dukić V, Lopes HF, Polson NG. Tracking epidemics with Google flu trends data and a state-space SEIR model. <span class="ref-journal">Journal of the American Statistical Association</span>. 2012;107(500):1410&ndash;1426. <a href="https://doi.org/10.1080/01621459.2012.713876">doi:10.1080/01621459.2012.713876</a></li>
+
+  <li>Yang W, Lipsitch M, Shaman J. Inference of seasonal and pandemic influenza transmission dynamics. <span class="ref-journal">Proceedings of the National Academy of Sciences</span>. 2014;111(26):9684&ndash;9689. <a href="https://doi.org/10.1073/pnas.1415012111">doi:10.1073/pnas.1415012111</a></li>
+
+  <li>Funk S, Camacho A, Kucharski AJ, Eggo RM, Edmunds WJ. Real-time forecasting of infectious disease dynamics with a stochastic semi-mechanistic model. <span class="ref-journal">Epidemics</span>. 2018;22:56&ndash;61. <a href="https://doi.org/10.1016/j.epidem.2016.11.003">doi:10.1016/j.epidem.2016.11.003</a></li>
+
+  <li>He D, Ionides EL, King AA. Plug-and-play inference for disease dynamics: measles in large and small populations as a case study. <span class="ref-journal">Journal of the Royal Society Interface</span>. 2010;7(43):271&ndash;283. <a href="https://doi.org/10.1098/rsif.2009.0151">doi:10.1098/rsif.2009.0151</a></li>
+
+  <li>Dureau J, Kalogeropoulos K, Baguelin M. Capturing the time-varying drivers of an epidemic using stochastic dynamical systems. <span class="ref-journal">Biostatistics</span>. 2013;14(3):541&ndash;555. <a href="https://doi.org/10.1093/biostatistics/kxs052">doi:10.1093/biostatistics/kxs052</a></li>
+
+  <li>Liu J, West M. Combined parameter and state estimation in simulation-based filtering. In: <span class="ref-journal">Sequential Monte Carlo Methods in Practice</span>. Springer; 2001:197&ndash;223. <a href="https://doi.org/10.1007/978-1-4757-3437-9_10">doi:10.1007/978-1-4757-3437-9_10</a></li>
+
+  <li>Ionides EL, Nguyen D, Atchadé Y, Stoev S, King AA. Inference for dynamic and latent variable models via iterated, perturbed Bayes maps. <span class="ref-journal">Proceedings of the National Academy of Sciences</span>. 2015;112(3):719&ndash;724. <a href="https://doi.org/10.1073/pnas.1410597112">doi:10.1073/pnas.1410597112</a></li>
+
+  <li>King AA, Nguyen D, Ionides EL. Statistical inference for partially observed Markov processes via the R package pomp. <span class="ref-journal">Journal of Statistical Software</span>. 2016;69(12):1&ndash;43. <a href="https://doi.org/10.18637/jss.v069.i12">doi:10.18637/jss.v069.i12</a></li>
+
+  <li>Snyder C, Bengtsson T, Bickel P, Anderson J. Obstacles to high-dimensional particle filtering. <span class="ref-journal">Monthly Weather Review</span>. 2008;136(12):4629&ndash;4640. <a href="https://doi.org/10.1175/2008MWR2529.1">doi:10.1175/2008MWR2529.1</a></li>
+
+  <li>Pitt MK, Shephard N. Filtering via simulation: auxiliary particle filters. <span class="ref-journal">Journal of the American Statistical Association</span>. 1999;94(446):590&ndash;599. <a href="https://doi.org/10.1080/01621459.1999.10474153">doi:10.1080/01621459.1999.10474153</a></li>
+
+  <li>Del Moral P, Doucet A, Jasra A. Sequential Monte Carlo samplers. <span class="ref-journal">Journal of the Royal Statistical Society: Series B</span>. 2006;68(3):411&ndash;436. <a href="https://doi.org/10.1111/j.1467-9868.2006.00553.x">doi:10.1111/j.1467-9868.2006.00553.x</a></li>
+
+  <li>Herbst E, Schorfheide F. Tempered particle filtering. <span class="ref-journal">Journal of Econometrics</span>. 2019;210(1):26&ndash;44. <a href="https://doi.org/10.1016/j.jeconom.2018.11.003">doi:10.1016/j.jeconom.2018.11.003</a></li>
+
+  <li>Guarniero P, Johansen AM, Lee A. The iterated auxiliary particle filter. <span class="ref-journal">Journal of the American Statistical Association</span>. 2017;112(520):1636&ndash;1647. <a href="https://doi.org/10.1080/01621459.2016.1222291">doi:10.1080/01621459.2016.1222291</a></li>
+
+  <li>Beskos A, Crisan D, Jasra A. On the stability of sequential Monte Carlo methods in high dimensions. <span class="ref-journal">Annals of Applied Probability</span>. 2014;24(4):1396&ndash;1445. <a href="https://doi.org/10.1214/13-AAP951">doi:10.1214/13-AAP951</a></li>
+
+  <li>Kantas N, Beskos A, Jasra A. Sequential Monte Carlo methods for high-dimensional inverse problems: a case study for the Navier&ndash;Stokes equations. <span class="ref-journal">SIAM/ASA Journal on Uncertainty Quantification</span>. 2014;2(1):464&ndash;489. <a href="https://doi.org/10.1137/130930364">doi:10.1137/130930364</a></li>
+
+  <li>Prem K, van Zandvoort K, Klepac P, et&nbsp;al. Projecting contact matrices in 177 geographical regions: an update and comparison with empirical data for the COVID-19 era. <span class="ref-journal">PLOS Computational Biology</span>. 2021;17(7):e1009098. <a href="https://doi.org/10.1371/journal.pcbi.1009098">doi:10.1371/journal.pcbi.1009098</a></li>
+
+  <li>Butcher JC. Runge&ndash;Kutta methods. In: <span class="ref-journal">Numerical Methods for Ordinary Differential Equations</span>. John Wiley &amp; Sons; 2016:143&ndash;331. <a href="https://doi.org/10.1002/9781119121534.ch3">doi:10.1002/9781119121534.ch3</a></li>
+</ol>
+
+<footer>
+  Manathunga et&nbsp;al. &middot; SMDM 2026 Lusted Student Prize finalist (QMTD) &middot; McGill University &middot; <a href="https://github.com/ssm123ssm/adaptive-sampling">github.com/ssm123ssm/adaptive-sampling</a>
+</footer>
+
+</div>
 </body>
 </html>
